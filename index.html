@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zoom Meeting SDK Sample JavaScript</title>
+
+    <!-- For Client View -->
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.3.0/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.3.0/css/react-select.css" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Origin Trials to enable Gallery View in Chrome/Edge -->
+    <!-- More Info: https://marketplace.zoom.us/docs/sdk/overview/improve-performance -->
+    <!-- SharedArrayBuffers in non-isolated pages on Desktop platforms -->
+    <meta http-equiv="origin-trial" content="">
+  </head>
+  <body>
+
+    <main>
+      <h1>Zoom Meeting SDK Sample JavaScript</h1>
+
+      <!-- For Component View -->
+      <div id="meetingSDKElement">
+        <!-- Zoom Meeting SDK Rendered Here -->
+      </div>
+
+      <button onClick="getSignature()">Join Meeting</button>
+    </main>
+
+    <!-- For Component and Client View -->
+    <script src="https://source.zoom.us/2.3.0/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/2.3.0/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/2.3.0/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/2.3.0/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/2.3.0/lib/vendor/lodash.min.js"></script>
+
+    <!-- For Client View -->
+    <script src="https://source.zoom.us/zoom-meeting-2.3.0.min.js"></script>
+    <script type="text/javascript" src="client-view.js"></script>
+
+    <!-- For Component View -->
+    <!-- <script src="https://source.zoom.us/2.3.0/zoom-meeting-embedded-2.3.0.min.js"></script> -->
+    <!-- <script type="text/javascript" src="component-view.js"></script> -->
+
+  </body>
+</html>
