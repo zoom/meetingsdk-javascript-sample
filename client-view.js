@@ -4,7 +4,7 @@ ZoomMtg.prepareWebSDK();
 ZoomMtg.i18n.load('en-US');
 ZoomMtg.i18n.reload('en-US');
 
-ZoomMtg.setZoomJSLib('https://source.zoom.us/2.3.0/lib', '/av');
+ZoomMtg.setZoomJSLib('https://source.zoom.us/2.3.5/lib', '/av');
 
 // setup your signature endpoint here: https://github.com/zoom/meetingsdk-sample-signature-node.js
 var signatureEndpoint = '';
