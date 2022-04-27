@@ -54,7 +54,7 @@ To get started, clone the repo:
 
 ## Usage
 
-1. Navigate to index.html in your browser ([or serve over localhost](https://stackoverflow.com/a/38497387/6592510)) and click "Join Meeting".
+1. Navigate to index.html in your browser ([or serve over localhost](https://www.npmjs.com/package/http-server)) and click "Join Meeting".
 
    ### Client View
 
