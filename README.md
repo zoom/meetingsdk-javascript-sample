@@ -26,28 +26,29 @@ To get started, clone the repo:
 
    | Variable                   | Description |
    | -----------------------|-------------|
-   | signatureEndpoint          | Required, the endpoint url that returns a signature. [Get a signature endpoint here.](https://github.com/zoom/meetingsdk-sample-signature-node.js) |
-   | sdkKey                   | Required, your Zoom SDK App Key. [You can get yours here](https://marketplace.zoom.us/develop/create). |
+   | authEndpoint          | Required, your Meeting SDK auth endpoint that secuerly generates a Meeting SDK JWT. [Get a Meeting SDK auth endpoint here.](https://github.com/zoom/meetingsdk-sample-signature-node.js) |
+   | sdkKey                   | Required, your Zoom Meeting SDK Key or Client ID for Meeting SDK app type's created after February 11, 2023. [You can get yours here](https://marketplace.zoom.us/develop/create). |
    | meetingNumber                   | Required, the Zoom Meeting or webinar number. |
+   | passWord                   | Optional, meeting password. Leave as empty string if the meeting does not require a password. |
    | role                   | Required, `0` to specify participant, `1` to specify host. |
-   | leaveUrl                   | Required, the url the user is taken to once the meeting is over. |
    | userName                   | Required, a name for the user joining / starting the meeting / webinar. |
    | userEmail                   | Required for Webinar, optional for Meeting, required for meeting and webinar if [registration is required]([registration](https://support.zoom.us/hc/en-us/articles/360054446052-Managing-meeting-and-webinar-registration)). The email of the user starting or joining the meeting / webinar. |
-   | passWord                   | Optional, meeting password. Leave as empty string if the meeting does not require a password. |
    | registrantToken            | Required if your [meeting](https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/meetings#join-registered) or [webinar](https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/webinars) requires [registration](https://support.zoom.us/hc/en-us/articles/360054446052-Managing-meeting-and-webinar-registration). |
+   | zakToken            | Required to start meetings or webinars on external Zoom user's behalf, the [authorized Zoom user's ZAK token](https://marketplace.zoom.us/docs/sdk/native-sdks/auth/). |
+   | leaveUrl                   | Required for Client View, the url the user is taken to once the meeting is over. |
 
    Example:
 
    ```js
-   var signatureEndpoint = 'http://localhost:4000'
+   var authEndpoint = 'http://localhost:4000'
    var sdkKey = 'abc123'
    var meetingNumber = '123456789'
+   var passWord = ''
    var role = 0
-   var leaveUrl = 'https://zoom.us'
    var userName = 'JavaScript'
    var userEmail = ''
-   var passWord = ''
    var registrantToken = ''
+   var leaveUrl = 'https://zoom.us'
    ```
 
 1. Save `client-view.js`. (Or `component-view.js` if using Component View.)
@@ -62,7 +63,7 @@ To get started, clone the repo:
 
    ### Component View
 
-   ![Zoom Meeting SDK Component View](https://marketplace.zoom.us/docs/static/msdk-web-component-view-220cc5d1221312f8363cdb58405c0c23.gif)
+   ![Zoom Meeting SDK Component View](https://marketplace.zoom.us/docs/static/msdk-web-component-view-64311bbbf32eaddfc2f3fac6e89928df.gif)
 
   Learn more about [Gallery View requirements](https://marketplace.zoom.us/docs/sdk/overview/improve-performance) and [see more product screenshots](https://marketplace.zoom.us/docs/sdk/overview/improve-performance#sharedarraybuffer-ui-differences).
 
