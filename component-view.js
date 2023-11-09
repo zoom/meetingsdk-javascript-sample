@@ -12,11 +12,6 @@ var userEmail = ''
 var registrantToken = ''
 var zakToken = ''
 
-client.init({
-  zoomAppRoot: meetingSDKElement,
-  language: 'en-US',
-})
-
 function getSignature() {
   fetch(authEndpoint, {
     method: 'POST',
@@ -38,14 +33,23 @@ function getSignature() {
 }
 
 function startMeeting(signature) {
-  client.join({
-    signature: signature,
-    sdkKey: sdkKey,
-    meetingNumber: meetingNumber,
-    password: passWord,
-    userName: userName,
-    userEmail: userEmail,
-    tk: registrantToken,
-    zak: zakToken
+
+  client.init({zoomAppRoot: meetingSDKElement, language: 'en-US'}).then(() => {
+    client.join({
+      signature: signature,
+      sdkKey: sdkKey,
+      meetingNumber: meetingNumber,
+      password: passWord,
+      userName: userName,
+      userEmail: userEmail,
+      tk: registrantToken,
+      zak: zakToken
+    }).then(() => {
+      console.log('joined succesfully')
+    }).catch((error) => {
+      console.log(error)
+    })
+  }).catch((error) => {
+    console.log(error)
   })
 }
