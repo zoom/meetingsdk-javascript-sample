@@ -34,7 +34,7 @@ function getSignature() {
 
 function startMeeting(signature) {
 
-  client.init({zoomAppRoot: meetingSDKElement, language: 'en-US'}).then(() => {
+  client.init({zoomAppRoot: meetingSDKElement, language: 'en-US', patchJsMedia: true}).then(() => {
     client.join({
       signature: signature,
       sdkKey: sdkKey,
@@ -45,7 +45,7 @@ function startMeeting(signature) {
       tk: registrantToken,
       zak: zakToken
     }).then(() => {
-      console.log('joined succesfully')
+      console.log('joined successfully')
     }).catch((error) => {
       console.log(error)
     })
