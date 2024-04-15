@@ -10,15 +10,15 @@ This repo is an HTML / CSS / JavaScript website that uses the [Zoom Meeting SDK]
 
 To get started, clone the repo:
 
-`$ git clone https://github.com/zoom/meetingsdk-sample-javascript.git`
+`$ git clone https://github.com/zoom/meetingsdk-javascript-sample.git`
 
 ## Setup
 
-1. Once cloned, navigate to the `meetingsdk-sample-javascript` directory:
+1. Once cloned, navigate to the `meetingsdk-javascript-sample` directory:
 
-   `$ cd meetingsdk-sample-javascript`
+   `$ cd meetingsdk-javascript-sample`
 
-1. Open the `meetingsdk-sample-javascript` directory in your code editor.
+1. Open the `meetingsdk-javascript-sample` directory in your code editor.
 
 1. Open the `client-view.js` file, and enter values for the variables:
 
