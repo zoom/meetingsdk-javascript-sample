@@ -39,6 +39,7 @@ function startMeeting(signature) {
   ZoomMtg.init({
     leaveUrl: leaveUrl,
     patchJsMedia: true,
+    leaveOnPageUnload: true,
     success: (success) => {
       console.log(success)
       ZoomMtg.join({
