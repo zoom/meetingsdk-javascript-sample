@@ -27,7 +27,6 @@ To get started, clone the repo:
    | Variable                   | Description |
    | -----------------------|-------------|
    | authEndpoint          | Required, your Meeting SDK auth endpoint that securely generates a Meeting SDK JWT. [Get a Meeting SDK auth endpoint here.](https://github.com/zoom/meetingsdk-sample-signature-node.js) |
-   | sdkKey                   | Required, your Zoom Meeting SDK Key or Client ID for Meeting SDK app type's created after February 11, 2023. [You can get yours here](https://developers.zoom.us/docs/meeting-sdk/developer-accounts/#get-meeting-sdk-credentials). |
    | meetingNumber                   | Required, the Zoom Meeting or webinar number. |
    | passWord                   | Optional, meeting password. Leave as empty string if the meeting does not require a password. |
    | role                   | Required, `0` to specify participant, `1` to specify host. |
@@ -41,7 +40,6 @@ To get started, clone the repo:
 
    ```js
    var authEndpoint = 'http://localhost:4000'
-   var sdkKey = 'abc123'
    var meetingNumber = '123456789'
    var passWord = ''
    var role = 0
@@ -51,7 +49,7 @@ To get started, clone the repo:
    var leaveUrl = 'https://zoom.us'
    ```
 
-1. Save `client-view.js`. (Or `component-view.js` if using Component View.)
+2. Save `client-view.js`. (Or `component-view.js` if using Component View.)
 
 ## Usage
 
